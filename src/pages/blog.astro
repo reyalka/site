@@ -1,0 +1,17 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = getCollection("blog");
+---
+<Layout title="blog">
+  {posts.map((post) => {
+    return (
+      <article>
+        <h2>{post.title}</h2>
+        <p>{post.date}</p>
+        <p>{post.excerpt}</p>
+      </article>
+    );
+  })}
+</Layout>
