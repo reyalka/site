@@ -1,5 +1,5 @@
 {
-  "name": "reyalka",
+  "name": "site",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,14 +7,25 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fmt": "biome fmt --fix",
+    "lint": "biome lint --write"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.1.1",
     "@astrojs/tailwind": "^5.1.2",
+    "@fontsource/kaisei-opti": "^5.1.0",
     "@react-spring/web": "^9.7.5",
+    "fast-xml-parser": "^4.5.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "astro": "^4.16.10",
-    "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
   }
 }

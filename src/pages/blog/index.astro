@@ -1,0 +1,64 @@
+---
+import { Debug } from "astro:components";
+import { XMLParser } from "fast-xml-parser";
+import { Articles, type Article } from "@/components/Articles";
+import { Image } from "astro:assets";
+import Layout from "@/layouts/Layout.astro";
+
+const zennUrl = "https://zenn.dev/reyalka/feed?all=1";
+const parser = new XMLParser({
+    ignoreAttributes: false,
+});
+
+async function fetchZennArticles(): Promise<Article[]> {
+    const response = await fetch(zennUrl);
+    const xml = await response.text();
+    const data = parser.parse(xml);
+    return data?.rss?.channel?.item.map(
+        (item: {
+            title: string;
+            link: string;
+            pubDate: string;
+            enclosure: { "@_url": string };
+        }) => {
+            return {
+                title: item?.title,
+                link: item?.link,
+                pubDate: new Date(Date.parse(item?.pubDate)).toLocaleDateString(
+                    "ja-JP",
+                ),
+                ogUrl: item?.enclosure["@_url"],
+            } satisfies Article;
+        },
+    );
+}
+
+const zennArticles = await fetchZennArticles();
+---
+
+<Layout title="Blog">
+    <h1 class="text-3xl font-bold">Blog</h1>
+    <div class="flex flex-col gap-4 m-5 items-center">
+        {
+            zennArticles.map((article) => {
+                return (
+                    <a
+                        class="flex w-[min(70rem,100%)] shadow-3 gap-3 shadow-md border-2 border-gray-400 bg- rounded-md p-4 hover:scale-105 transition duration-150"
+                        href={article.link}
+                    >
+                        <Image
+                            src={article.ogUrl}
+                            alt={article.title}
+                            width={200}
+                            inferSize={true}
+                        />
+                        <div class="flex flex-col">
+                            <p class="font-bold text-xl">{article.title}</p>
+                            <p>{article.pubDate}</p>
+                        </div>
+                    </a>
+                );
+            })
+        }
+    </div>
+</Layout>
