@@ -10,5 +10,6 @@ export default defineConfig({
 	integrations: [tailwind(), react()],
 	image: {
 		domains: ["res.cloudinary.com"],
-	}
+	},
+	site: "https://reyalka.pages.dev",
 });

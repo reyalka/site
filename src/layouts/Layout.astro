@@ -1,5 +1,5 @@
 ---
-import Header from '@/components/Header.astro';
+import Header from "@/components/Header.astro";
 import "@fontsource/kaisei-opti";
 
 interface Props {
@@ -17,11 +17,16 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{`${title} | reyalka-dev`}</title>
+		<title>{`${title} | れやかボックス`}</title>
 	</head>
-	<body>
+	<body class="flex flex-col min-h-screen">
 		<Header />
-		<slot />
+		<div class="m-4 grow">
+			<slot />
+		</div>
+		<footer class="text-center text-sm text-gray-500 p-4">
+			Copyright © 2024 れやか,reyalka. All rights reserved.
+		</footer>
 	</body>
 </html>
 <style is:global>
@@ -35,10 +40,12 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
-		margin: 1rem;
 	}
 	html {
-		font-family: Kaisei Opti, system-ui, sans-serif;
+		font-family:
+			Kaisei Opti,
+			system-ui,
+			sans-serif;
 		background-color: #e3f2e8;
 	}
 	code {

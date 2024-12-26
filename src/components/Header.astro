@@ -1,21 +1,35 @@
 ---
+import { Github, Home, NotebookPen, Rss, type IconNode } from "lucide";
+import Icon from "./Icon.astro";
 
+const items: { name: string; href: string; icon: IconNode }[] = [
+    { name: "Home", href: "/", icon: Home },
+    { name: "Blog", href: "/blog", icon: NotebookPen },
+    { name: "Repo", href: "https://github.com/reyalka/site", icon: Github },
+    { name: "RSS", href: "/rss.xml", icon: Rss },
+];
 ---
 
-<header class="flex gap-5">
-    <a class="text-4xl" href="/">サイト</a>
-    <nav class="flex justify-center gap-4 items-center">
-        <a
-            href="/"
-            class="hover:scale-105 transition duration-100 hover:duration-75"
-        >
-            Home
-        </a>
-        <a
-            href="/blog"
-            class="hover:scale-105 transition duration-100 hover:duration-75"
-        >
-            Blog
-        </a>
+<header
+    class="flex flex-col gap-5 p-5 shadow-lg text-site-light-black sm:flex-row w-svw"
+>
+    <div class="flex items-center grow hover:scale-105 transition duration-300">
+        <img src="/reyalka.png" alt="" class="w-16 h-16" />
+        <a class="text-4xl italic" href="/">れやかボックス</a>
+    </div>
+    <nav
+        class="flex justify-start gap-4 items-center text-2xl sm:justify-center"
+    >
+        {
+            items.map(({ name, href, icon }) => (
+                <a
+                    class="hover:scale-105 transition duration-300 hover:duration-75 flex items-center"
+                    href={href}
+                >
+                    <Icon icon={icon} />
+                    {name}
+                </a>
+            ))
+        }
     </nav>
 </header>
