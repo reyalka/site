@@ -1,8 +1,6 @@
 import { useSpecificSpring } from "@/hooks/useSpecificSpring";
 import { animated } from "@react-spring/web";
-import type { IconNode } from "lucide";
-import Icon from "./Icon.astro";
-import { Account, accountInfo, Accounts } from "./Accounts";
+import { Account, accountInfo } from "./Accounts";
 import type { JSX } from "astro/jsx-runtime";
 
 export default function Page() {
@@ -37,7 +35,9 @@ export default function Page() {
 					<ProfileList
 						title=""
 						contents={[
-							<p key="intro" className="text-3xl">フロントエンドに興味がある学生です。</p>,
+							<p key="intro" className="text-3xl">
+								フロントエンドに興味がある学生です。
+							</p>,
 							...accountInfo.map((account) => {
 								return <Account key={account.link} account={account} />;
 							}),

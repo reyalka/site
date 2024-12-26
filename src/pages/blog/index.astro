@@ -1,7 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "@/layouts/Layout.astro";
 import { fetchZennArticles } from "@/utils/zenn";
+
+export const prerender = false;
 
 const zennArticles = await fetchZennArticles();
 ---
@@ -9,7 +10,6 @@ const zennArticles = await fetchZennArticles();
 <Layout title="Blog">
     <h1 class="text-3xl font-bold">Blog</h1>
     <div class="flex flex-col gap-4 m-5 items-center">
-        <!-- <Articles articles={zennArticles} client:idle/> -->
         {
             zennArticles.map((article) => {
                 return (
@@ -17,11 +17,11 @@ const zennArticles = await fetchZennArticles();
                         class="flex flex-col sm:flex-row w-[min(70rem,100%)] shadow-3 gap-3 shadow-md border-2 border-gray-400 bg- rounded-md p-4 hover:scale-105 transition duration-150"
                         href={article.link}
                     >
-                        <Image
+                        <img
                             src={article.ogUrl}
                             alt={article.title}
                             width={200}
-                            inferSize={true}
+                            height={100}
                             class="object-contain"
                         />
                         <div class="flex flex-col">

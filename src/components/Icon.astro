@@ -2,7 +2,7 @@
 import type { IconNode } from "lucide";
 
 type Props = {
-    icon: IconNode;
+	icon: IconNode;
 };
 
 const { icon, ...props } = Astro.props;
@@ -10,16 +10,13 @@ const { icon, ...props } = Astro.props;
 const [, attributes, children] = icon;
 
 const componentChildren = children
-    ?.map(
-        ([child, attributes]) =>
-            `<${child} ${Object.entries(attributes)
-                .map(([k, v]) => `${k}="${v}"`)
-                .join(" ")} />`,
-    )
-    .join("\n");
-
-// 3. Merge `attributes` and `props`
-const componentAttributes = { ...attributes, ...props };
+	?.map(
+		([child, attributes]) =>
+			`<${child} ${Object.entries(attributes)
+				.map(([k, v]) => `${k}="${v}"`)
+				.join(" ")} />`,
+	)
+	.join("\n");
 ---
 
 <svg 

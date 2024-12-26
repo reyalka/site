@@ -12,7 +12,7 @@ export default {
 				"big-small": "big-small 0.3s infinte",
 			},
 			keyframes: {
-				"shake": {
+				shake: {
 					"0%, 100%": { transform: "translateY(0)" },
 					"33%": { transform: "translateY(-2px)" },
 					"67%": { transform: "translateY(2px)" },

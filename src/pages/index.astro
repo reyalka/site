@@ -1,11 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import MainPage from '@/components/MainPage';
+import Layout from "../layouts/Layout.astro";
+import MainPage from "@/components/MainPage";
 ---
 
 <Layout title="Home">
 	<div class="flex flex-row justify-center">
-		<MainPage client:idle />
+		<MainPage client:load />
 	</div>
 </Layout>

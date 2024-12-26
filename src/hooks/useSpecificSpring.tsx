@@ -6,7 +6,7 @@ export function useSpecificSpring() {
 		delay = 0,
 		mass = 2,
 		tention = 200,
-	}: { from: number; delay?: number, mass?: number, tention?: number }) {
+	}: { from: number; delay?: number; mass?: number; tention?: number }) {
 		return useSpring({
 			from: { x: from, opacity: 0 },
 			to: { x: 0, opacity: 1 },
