@@ -1,6 +1,6 @@
 import type { JSX } from "astro/jsx-runtime";
 
-export type AccountType = {
+type AccountType = {
 	sns: {
 		name: string;
 		icon: JSX.Element;
@@ -10,6 +10,7 @@ export type AccountType = {
 	link: string;
 };
 
+// simple icons https://simpleicons.org/
 export const accountInfo: AccountType[] = [
 	{
 		sns: {
