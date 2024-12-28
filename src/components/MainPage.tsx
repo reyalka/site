@@ -14,7 +14,7 @@ export default function Page() {
 		<div className="flex flex-col gap-10 rounded-lg sm:flex-row">
 			<animated.div className="z-10 flex flex-col justify-center">
 				<animated.img
-					src="/reyalka.png"
+					src="/reyalka.webp"
 					alt="reyalka"
 					style={iconSpring}
 					className="z-20 h-60 w-60 rounded-[20%] border-2 border-black-200 shadow-md"
