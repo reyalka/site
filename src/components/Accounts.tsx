@@ -1,7 +1,7 @@
 import type { JSX } from "astro/jsx-runtime";
 
 type AccountType = {
-	sns: {
+	media: {
 		name: string;
 		icon: JSX.Element;
 		color: string;
@@ -13,7 +13,7 @@ type AccountType = {
 // simple icons https://simpleicons.org/
 export const accountInfo: AccountType[] = [
 	{
-		sns: {
+		media: {
 			name: "GitHub",
 			icon: (
 				<svg
@@ -28,11 +28,11 @@ export const accountInfo: AccountType[] = [
 			),
 			color: "#181717",
 		},
-		name: "reyalka",
+		name: "@reyalka",
 		link: "https://github.com/reyalka",
 	},
 	{
-		sns: {
+		media: {
 			name: "X",
 			icon: (
 				<svg
@@ -47,11 +47,11 @@ export const accountInfo: AccountType[] = [
 			),
 			color: "#000000",
 		},
-		name: "_reyalka_",
+		name: "@_reyalka_",
 		link: "https://x.com/_reyalka_",
 	},
 	{
-		sns: {
+		media: {
 			name: "Zenn",
 			icon: (
 				<svg
@@ -66,11 +66,11 @@ export const accountInfo: AccountType[] = [
 			),
 			color: "#3EA8FF",
 		},
-		name: "reyalka",
+		name: "@reyalka",
 		link: "https://zenn.dev/reyalka",
 	},
 	{
-		sns: {
+		media: {
 			name: "Bluesky",
 			icon: (
 				<svg
@@ -85,11 +85,11 @@ export const accountInfo: AccountType[] = [
 			),
 			color: "#0285FF",
 		},
-		name: "reyalka.bsky.social",
+		name: "@reyalka.bsky.social",
 		link: "https://bsky.app/profile/reyalka.bsky.social",
 	},
 	{
-		sns: {
+		media: {
 			name: "Discord",
 			icon: (
 				<svg
@@ -104,25 +104,48 @@ export const accountInfo: AccountType[] = [
 			),
 			color: "#5865F2",
 		},
-		name: "reyalka_",
+		name: "@reyalka_",
 		link: "https://discord.com/users/1319666895208841268",
 	},
+	{
+		media: {
+			name: "Nostr",
+			icon: (
+				<svg
+					fill="#662482"
+					role="img"
+					viewBox="0 0 256 256"
+					xmlns="http://www.w3.org/
+					2000/svg"
+				>
+					<title>Nostr</title>
+					<path d="m231.16,159.49c0,20.71,0,31.07-3.53,42.22-4.43,12.17-14.02,21.76-26.19,26.19-11.15,3.53-21.5,3.53-42.22,3.53h-62.46c-20.71,0-31.06,0-42.21-3.53-12.17-4.43-21.76-14.02-26.19-26.19-3.53-11.15-3.53-21.5-3.53-42.22v-62.46c0-20.71,0-31.07,3.53-42.22,4.43-12.17,14.02-21.76,26.19-26.19,11.15-3.52,21.5-3.52,42.21-3.52h62.46c20.71,0,31.07,0,42.22,3.52,12.17,4.43,21.76,14.02,26.19,26.19,3.53,11.15,3.53,21.5,3.53,42.22v62.46Z" />
+					<path
+						className="fill-white"
+						d="m210.81,116.2v83.23c0,3.13-2.54,5.67-5.67,5.67h-68.04c-3.13,0-5.67-2.54-5.67-5.67v-15.5c.31-19,2.32-37.2,6.54-45.48,2.53-4.98,6.7-7.69,11.49-9.14,9.05-2.72,24.93-.86,31.67-1.18,0,0,20.36.81,20.36-10.72,0-9.28-9.1-8.55-9.1-8.55-10.03.26-17.67-.42-22.62-2.37-8.29-3.26-8.57-9.24-8.6-11.24-.41-23.1-34.47-25.87-64.48-20.14-32.81,6.24.36,53.27.36,116.05v8.38c-.06,3.08-2.55,5.57-5.65,5.57h-33.69c-3.13,0-5.67-2.54-5.67-5.67V55.49c0-3.13,2.54-5.67,5.67-5.67h31.67c3.13,0,5.67,2.54,5.67,5.67,0,4.65,5.23,7.24,9.01,4.53,11.39-8.16,26.01-12.51,42.37-12.51,36.65,0,64.36,21.36,64.36,68.69Zm-60.84-16.89c0-6.7-5.43-12.13-12.13-12.13s-12.13,5.43-12.13,12.13,5.43,12.13,12.13,12.13,12.13-5.43,12.13-12.13Z"
+					/>
+				</svg>
+			),
+			color: "#662482",
+		},
+		name: "npub1rylka32nuvt5dztfeq6vd2pfdnnktn6457ennyqssse2zp9p5jrsrt9gex",
+		link: "https://njump.me/nprofile1qqspj0mwc4f7x96x395usdxx4q5keem9ea260veejqgggv4pqjs6fpccj3gw3",
+	},
 ];
-
 export function Account({ account }: { account: AccountType }) {
-	const { link, sns, name } = account;
+	const { link, media: sns, name } = account;
 	return (
 		<a
 			href={link}
-			className="flex flex-col rounded-full px-8 py-2 font-mono transition duration-150 hover:scale-105 sm:flex-row sm:gap-5"
+			className="flex max-w-[30rem] flex-col rounded-full px-8 py-2 font-mono transition duration-150 hover:scale-105 sm:flex-row sm:gap-5"
 			style={{ backgroundColor: `${sns.color}33` }}
 		>
 			<div className="flex items-center gap-2">
 				<div style={{ width: "24px", height: "24px" }}>{sns.icon}</div>
 				<p>{sns.name}</p>
 			</div>
-			<p className="ml-3 transition duration-150 hover:scale-105 hover:font-bold hover:underline hover:duration-300 sm:ml-0">
-				@{name}
+			<p className="ml-3 truncate transition duration-150 hover:scale-105 hover:font-bold hover:underline hover:duration-300 sm:ml-0">
+			{name}
 			</p>
 		</a>
 	);

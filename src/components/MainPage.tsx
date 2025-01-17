@@ -38,9 +38,11 @@ export default function Page() {
 							<p key="intro" className="text-3xl">
 								フロントエンドに興味がある学生です。
 							</p>,
-							...accountInfo.map((account) => {
-								return <Account key={account.link} account={account} />;
-							}),
+							<div key="accounts" className="flex flex-col gap-3">
+								{...accountInfo.map((account) => {
+									return <Account key={account.link} account={account} />;
+								})}
+							</div>,
 						]}
 					/>
 				</li>

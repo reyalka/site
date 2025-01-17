@@ -28,7 +28,7 @@ export function Articles({ articles }: { articles: Article[] }) {
 							alt={article.title}
 							className="h-40 w-full object-cover"
 						/>
-						<h3 className="text-2xl font-bold">{article.title}</h3>
+						<h3 className="font-bold text-2xl">{article.title}</h3>
 						<p className="text-lg">{article.description}</p>
 						<p className="text-sm">{article.pubDate}</p>
 					</animated.a>
