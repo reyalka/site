@@ -1,0 +1,17 @@
+---
+import Layout from "./Layout.astro";
+import BlogWrapper from "./BlogWrapper.astro";
+
+type Props = {
+	title: string;
+	noindex?: boolean;
+};
+
+const { title, noindex = false } = Astro.props;
+---
+<Layout title={title} noindex={noindex}>
+	<BlogWrapper>
+		<slot />	
+	</BlogWrapper>
+</Layout>
+
