@@ -13,6 +13,8 @@
 		}
 	},
 	"formatter": {
-		"enabled": true
+		"enabled": true,
+		"indentWidth": 2,
+		"indentStyle": "tab"
 	}
 }
