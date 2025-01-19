@@ -8,29 +8,29 @@ const zennArticles = await fetchZennArticles();
 ---
 
 <Layout title="Blog">
-    <h1 class="text-3xl font-bold">Blog</h1>
-    <div class="flex flex-col gap-4 m-5 items-center">
-        {
-            zennArticles.map((article) => {
-                return (
-                    <a
-                        class="flex flex-col sm:flex-row w-[min(70rem,100%)] shadow-3 gap-3 shadow-md border-2 border-gray-400 bg- rounded-md p-4 hover:scale-105 transition duration-150"
-                        href={article.link}
-                    >
-                        <img
-                            src={article.ogUrl}
-                            alt={article.title}
-                            width={200}
-                            height={100}
-                            class="object-contain"
-                        />
-                        <div class="flex flex-col">
-                            <p class="font-bold text-xl">{article.title}</p>
-                            <p>{article.pubDate}</p>
-                        </div>
-                    </a>
-                );
-            })
-        }
-    </div>
+	<h1 class="text-3xl font-bold">Blog</h1>
+	<div class="m-5 flex flex-col items-center gap-4">
+		{
+			zennArticles.map((article) => {
+				return (
+					<a
+						class="shadow-3 bg- flex w-[min(70rem,100%)] flex-col gap-3 rounded-md border-2 border-gray-400 p-4 shadow-md transition duration-150 hover:scale-105 sm:flex-row"
+						href={article.link}
+					>
+						<img
+							src={article.ogUrl}
+							alt={article.title}
+							width={200}
+							height={100}
+							class="object-contain"
+						/>
+						<div class="flex flex-col">
+							<p class="text-xl font-bold">{article.title}</p>
+							<p>{article.pubDate}</p>
+						</div>
+					</a>
+				);
+			})
+		}
+	</div>
 </Layout>

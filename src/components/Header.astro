@@ -11,25 +11,23 @@ const items: { name: string; href: string; icon: IconNode }[] = [
 ---
 
 <header
-    class="flex flex-col gap-5 p-5 shadow-lg text-site-light-black md:flex-row w-svw"
+	class="flex w-svw flex-col gap-5 p-5 text-site-light-black shadow-lg md:flex-row"
 >
-    <div class="flex items-center grow hover:scale-105 transition duration-300">
-        <img src="/reyalka.webp" alt="" class="w-16 h-16" />
-        <a class="text-4xl italic" href="/">れやかボックス</a>
-    </div>
-    <nav
-        class="flex justify-start gap-4 items-center text-2xl sm:justify-center"
-    >
-        {
-            items.map(({ name, href, icon }) => (
-                <a
-                    class="hover:scale-105 transition duration-300 hover:duration-75 flex items-center"
-                    href={href}
-                >
-                    <Icon icon={icon} />
-                    {name}
-                </a>
-            ))
-        }
-    </nav>
+	<div class="flex grow items-center transition duration-300 hover:scale-105">
+		<img src="/reyalka.webp" alt="" class="h-16 w-16" />
+		<a class="text-4xl italic" href="/">れやかボックス</a>
+	</div>
+	<nav class="flex items-center justify-start gap-4 text-2xl sm:justify-center">
+		{
+			items.map(({ name, href, icon }) => (
+				<a
+					class="flex items-center transition duration-300 hover:scale-105 hover:duration-75"
+					href={href}
+				>
+					<Icon icon={icon} />
+					{name}
+				</a>
+			))
+		}
+	</nav>
 </header>

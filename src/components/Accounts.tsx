@@ -145,7 +145,7 @@ export function Account({ account }: { account: AccountType }) {
 				<p>{media.name}</p>
 			</div>
 			<p className="ml-3 truncate transition duration-150 hover:scale-105 hover:font-bold hover:underline hover:duration-300 sm:ml-0">
-			{name}
+				{name}
 			</p>
 		</a>
 	);

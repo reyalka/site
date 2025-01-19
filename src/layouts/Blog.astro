@@ -9,9 +9,9 @@ type Props = {
 
 const { title, noindex = false } = Astro.props;
 ---
+
 <Layout title={title} noindex={noindex}>
 	<BlogWrapper>
-		<slot />	
+		<slot />
 	</BlogWrapper>
 </Layout>
-

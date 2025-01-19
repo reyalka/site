@@ -23,7 +23,7 @@ const { blog } = Astro.props;
 const { data } = blog;
 const { Content } = await render(blog);
 ---
+
 <Blog title={data.title} noindex={!data.published}>
 	<Content />
 </Blog>
-

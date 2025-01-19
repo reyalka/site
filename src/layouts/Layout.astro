@@ -23,12 +23,12 @@ const { title, noindex = false } = Astro.props;
 		{noindex && <meta name="robots" content="noindex" />}
 		<title>{`${title} | れやかボックス`}</title>
 	</head>
-	<body class="flex flex-col min-h-screen">
+	<body class="flex min-h-screen flex-col">
 		<Header />
 		<div class="m-4 grow">
 			<slot />
 		</div>
-		<footer class="text-center text-sm text-gray-500 p-4">
+		<footer class="p-4 text-center text-sm text-gray-500">
 			Copyright © 2024 - present(2025) れやか,reyalka. All rights reserved.
 		</footer>
 		<ViewTransitions />

@@ -17,20 +17,20 @@ export default function Page() {
 					src="/reyalka.webp"
 					alt="reyalka"
 					style={iconSpring}
-					className="z-20 h-60 w-60 rounded-[20%] border-2 border-black-200 shadow-md"
+					className="border-black-200 z-20 h-60 w-60 rounded-[20%] border-2 shadow-md"
 				/>
 				<animated.h2
 					style={nameSpring}
-					className="my-3 mr-4 font-bold font-serif text-5xl "
+					className="my-3 mr-4 font-serif text-5xl font-bold"
 				>
 					reyalka
 				</animated.h2>
-				<animated.p style={subNameSpring} className="font-bold text-3xl">
+				<animated.p style={subNameSpring} className="text-3xl font-bold">
 					れやか
 				</animated.p>
 			</animated.div>
 
-			<ul className="flex flex-col gap-3 ">
+			<ul className="flex flex-col gap-3">
 				<li>
 					<ProfileList
 						title=""
@@ -76,7 +76,7 @@ function ProfileList({
 
 	return (
 		<div className="flex flex-col">
-			<animated.h2 style={titleSpting} className="font-bold text-2xl">
+			<animated.h2 style={titleSpting} className="text-2xl font-bold">
 				{title}
 			</animated.h2>
 			<ul className="flex flex-col gap-5">
