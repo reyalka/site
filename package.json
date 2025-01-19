@@ -9,7 +9,8 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"fmt": "biome format --fix",
-		"lint": "biome lint --write"
+		"lint": "biome lint --write",
+		"prettier": "prettier"
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "^12.2.0",
@@ -29,6 +30,9 @@
 		"@types/react-dom": "^19.0.2",
 		"astro": "^5.1.7",
 		"fast-xml-parser": "^4.5.1",
+		"prettier": "3.4.2",
+		"prettier-plugin-astro": "0.14.1",
+		"prettier-plugin-tailwindcss": "0.6.10",
 		"typescript": "^5.6.3"
 	}
 }

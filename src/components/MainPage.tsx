@@ -11,7 +11,7 @@ export default function Page() {
 	const subNameSpring = makeVerticalSpring({ from: -100, delay: 250 });
 
 	return (
-		<div className="flex flex-col gap-10 rounded-lg sm:flex-row">
+		<div className="flex flex-col gap-10 rounded-lg md:flex-row">
 			<animated.div className="z-10 flex flex-col justify-center">
 				<animated.img
 					src="/reyalka.webp"
