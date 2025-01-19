@@ -1,7 +1,7 @@
 import type { JSX } from "astro/jsx-runtime";
 
 type AccountType = {
-	sns: {
+	media: {
 		name: string;
 		icon: JSX.Element;
 		color: string;
@@ -13,7 +13,7 @@ type AccountType = {
 // simple icons https://simpleicons.org/
 export const accountInfo: AccountType[] = [
 	{
-		sns: {
+		media: {
 			name: "GitHub",
 			icon: (
 				<svg
@@ -32,7 +32,7 @@ export const accountInfo: AccountType[] = [
 		link: "https://github.com/reyalka",
 	},
 	{
-		sns: {
+		media: {
 			name: "X",
 			icon: (
 				<svg
@@ -51,7 +51,7 @@ export const accountInfo: AccountType[] = [
 		link: "https://x.com/_reyalka_",
 	},
 	{
-		sns: {
+		media: {
 			name: "Zenn",
 			icon: (
 				<svg
@@ -70,7 +70,7 @@ export const accountInfo: AccountType[] = [
 		link: "https://zenn.dev/reyalka",
 	},
 	{
-		sns: {
+		media: {
 			name: "Bluesky",
 			icon: (
 				<svg
@@ -89,7 +89,7 @@ export const accountInfo: AccountType[] = [
 		link: "https://bsky.app/profile/reyalka.bsky.social",
 	},
 	{
-		sns: {
+		media: {
 			name: "Discord",
 			icon: (
 				<svg
@@ -110,16 +110,16 @@ export const accountInfo: AccountType[] = [
 ];
 
 export function Account({ account }: { account: AccountType }) {
-	const { link, sns, name } = account;
+	const { link, media, name } = account;
 	return (
 		<a
 			href={link}
 			className="flex flex-col rounded-full px-8 py-2 font-mono transition duration-150 hover:scale-105 sm:flex-row sm:gap-5"
-			style={{ backgroundColor: `${sns.color}33` }}
+			style={{ backgroundColor: `${media.color}33` }}
 		>
 			<div className="flex items-center gap-2">
-				<div style={{ width: "24px", height: "24px" }}>{sns.icon}</div>
-				<p>{sns.name}</p>
+				<div style={{ width: "24px", height: "24px" }}>{media.icon}</div>
+				<p>{media.name}</p>
 			</div>
 			<p className="ml-3 transition duration-150 hover:scale-105 hover:font-bold hover:underline hover:duration-300 sm:ml-0">
 				@{name}
