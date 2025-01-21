@@ -11,6 +11,7 @@ const { title, noindex = false } = Astro.props;
 ---
 
 <Layout title={title} noindex={noindex}>
+	<h1>{title}</h1>
 	<BlogWrapper>
 		<slot />
 	</BlogWrapper>

@@ -25,7 +25,7 @@ const { title, noindex = false } = Astro.props;
 	</head>
 	<body class="flex min-h-screen flex-col">
 		<Header />
-		<div class="m-4 grow">
+		<div class="m-4 grid max-w-[60rem] grow place-items-center">
 			<slot />
 		</div>
 		<footer class="p-4 text-center text-sm text-gray-500">

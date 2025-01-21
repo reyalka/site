@@ -8,7 +8,7 @@ export async function GET(context: any) {
 		description: "ブログやZennの記事をまとめています。",
 		site: context.site,
 		items: (await fetchZennArticles()).map(
-			({ title, link, rawPubDate, ogUrl }) => {
+			({ title, link, rawDate: rawPubDate, ogUrl }) => {
 				return {
 					title,
 					link,

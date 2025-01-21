@@ -6,11 +6,12 @@ export type Article = {
 	link: string;
 	title: string;
 	description: string;
-	rawPubDate: string;
-	pubDate: string;
+	rawDate: string;
+	date: string;
 	ogUrl: string;
 };
 
+// TODO: unused
 export function Articles({ articles }: { articles: Article[] }) {
 	return (
 		<div className="flex flex-col gap-5">
@@ -30,7 +31,7 @@ export function Articles({ articles }: { articles: Article[] }) {
 						/>
 						<h3 className="text-2xl font-bold">{article.title}</h3>
 						<p className="text-lg">{article.description}</p>
-						<p className="text-sm">{article.pubDate}</p>
+						<p className="text-sm">{article.date}</p>
 					</animated.a>
 				);
 			})}
@@ -57,7 +58,7 @@ export function ArticleList({ articles }: { articles: Article[] }) {
 						/>
 						<div className="flex flex-col">
 							<p className="text-xl font-bold">{article.title}</p>
-							<p>{article.pubDate}</p>
+							<p>{article.date}</p>
 						</div>
 					</a>
 				);
