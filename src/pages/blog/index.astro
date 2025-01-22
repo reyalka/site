@@ -1,36 +1,26 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { fetchZennArticles } from "@/utils/zenn";
+import { getCollection } from "astro:content";
+import Article from "@/components/Article.astro";
 
 export const prerender = false;
 
-const zennArticles = await fetchZennArticles();
+const blogArticles = await getCollection("blog");
+const zennArticles = await getCollection("zenn");
+
+const articles = [
+	...blogArticles.filter((entry) => entry.data.published),
+	...zennArticles,
+].sort((a, b) => {
+	const aDate = new Date(a.data.date);
+	const bDate = new Date(b.data.date);
+	return bDate.getTime() - aDate.getTime();
+});
 ---
 
 <Layout title="Blog">
-    <h1 class="text-3xl font-bold">Blog</h1>
-    <div class="flex flex-col gap-4 m-5 items-center">
-        {
-            zennArticles.map((article) => {
-                return (
-                    <a
-                        class="flex flex-col sm:flex-row w-[min(70rem,100%)] shadow-3 gap-3 shadow-md border-2 border-gray-400 bg- rounded-md p-4 hover:scale-105 transition duration-150"
-                        href={article.link}
-                    >
-                        <img
-                            src={article.ogUrl}
-                            alt={article.title}
-                            width={200}
-                            height={100}
-                            class="object-contain"
-                        />
-                        <div class="flex flex-col">
-                            <p class="font-bold text-xl">{article.title}</p>
-                            <p>{article.pubDate}</p>
-                        </div>
-                    </a>
-                );
-            })
-        }
-    </div>
+	<h1 class="text-3xl font-bold">Blog</h1>
+	<div class="m-5 flex flex-col items-center gap-4">
+		{articles.map((entry) => <Article entry={entry} />)}
+	</div>
 </Layout>

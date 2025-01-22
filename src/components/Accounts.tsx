@@ -133,19 +133,21 @@ export const accountInfo: AccountType[] = [
 	},
 ];
 export function Account({ account }: { account: AccountType }) {
-	const { link, media: sns, name } = account;
+	const { link, media, name } = account;
 	return (
 		<a
 			href={link}
-			className="flex max-w-[30rem] flex-col rounded-full px-8 py-2 font-mono transition duration-150 hover:scale-105 sm:flex-row sm:gap-5"
-			style={{ backgroundColor: `${sns.color}33` }}
+			className="flex w-[calc(100svw-2rem)] flex-col overflow-hidden rounded-full px-8 py-2 font-mono transition duration-150 hover:scale-105 sm:max-w-[60rem] sm:flex-row sm:gap-5"
+			style={{ backgroundColor: `${media.color}33` }}
+			target="_blank"
+			rel="noopener noreferrer"
 		>
 			<div className="flex items-center gap-2">
-				<div style={{ width: "24px", height: "24px" }}>{sns.icon}</div>
-				<p>{sns.name}</p>
+				<div style={{ width: "24px", height: "24px" }}>{media.icon}</div>
+				<p>{media.name}</p>
 			</div>
 			<p className="ml-3 truncate transition duration-150 hover:scale-105 hover:font-bold hover:underline hover:duration-300 sm:ml-0">
-			{name}
+				{name}
 			</p>
 		</a>
 	);

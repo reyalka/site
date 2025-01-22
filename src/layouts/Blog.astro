@@ -1,0 +1,24 @@
+---
+import Layout from "./Layout.astro";
+import BlogWrapper from "./BlogWrapper.astro";
+
+type Props = {
+	title: string;
+	date: string;
+	noindex?: boolean;
+};
+
+const { title, date, noindex = false } = Astro.props;
+---
+
+<Layout title={title} noindex={noindex}>
+	<article class="min-w-[80%]">
+		<h2 class="text-5xl shadow-slate-500 text-shadow">{title}</h2>
+		<p class="text-3xl text-site-light-black-600">
+			<time datetime={date}>{date}</time>
+		</p>
+		<BlogWrapper>
+			<slot />
+		</BlogWrapper>
+	</article>
+</Layout>

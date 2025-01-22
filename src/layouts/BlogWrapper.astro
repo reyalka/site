@@ -1,0 +1,51 @@
+<style>
+	div {
+		@apply text-left;
+	}
+	div :global(h1) {
+		@apply my-3 text-4xl font-bold underline underline-offset-2;
+	}
+	div :global(h2) {
+		@apply my-3 text-4xl font-bold underline underline-offset-0;
+	}
+	div :global(h3) {
+		@apply my-3 text-3xl font-bold;
+	}
+	div :global(h4) {
+		@apply my-3 text-2xl font-bold;
+	}
+	div :global(h5) {
+		@apply my-3 text-xl font-bold;
+	}
+	div :global(h6) {
+		@apply my-3 text-base font-bold;
+	}
+	div :global(p) {
+		@apply my-5 text-xl;
+	}
+	div :global(hr) {
+		@apply my-5 border-t border-gray-500;
+	}
+	div :global(code:not(pre > code)) {
+		@apply my-1 rounded-md bg-gray-400 p-1 font-mono text-sm;
+	}
+	div :global(pre) {
+		@apply my-3 rounded-md bg-gray-800 p-3 text-white;
+	}
+	div :global(li) {
+		@apply my-1 ml-5;
+	}
+	div :global(ul) {
+		@apply my-3 list-disc;
+	}
+	div :global(ol) {
+		@apply my-3 list-decimal;
+	}
+	div :global(a) {
+		@apply text-blue-500 underline hover:scale-110 hover:text-blue-700;
+	}
+</style>
+
+<div>
+	<slot />
+</div>
