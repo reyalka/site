@@ -11,13 +11,13 @@ export default function Page() {
 	const subNameSpring = makeVerticalSpring({ from: -100, delay: 250 });
 
 	return (
-		<div className="flex flex-col gap-10 rounded-lg md:flex-row">
-			<animated.div className="z-10 flex flex-col justify-center">
+		<div className="flex flex-col justify-center gap-10 rounded-lg sm:flex-row w-svw">
+			<animated.div className="z-10 flex flex-col justify-start">
 				<animated.img
 					src="/reyalka.webp"
 					alt="reyalka"
 					style={iconSpring}
-					className="border-black-200 z-20 h-60 w-60 rounded-[20%] border-2 shadow-md"
+					className="border-black-200 z-20 h-60 w-60 object-contain rounded-[20%] border-2 shadow-md"
 				/>
 				<animated.h2
 					style={nameSpring}
@@ -30,7 +30,7 @@ export default function Page() {
 				</animated.p>
 			</animated.div>
 
-			<ul className="flex flex-col gap-3">
+			<ul className="flex flex-col gap-3 sm:shrink">
 				<li>
 					<ProfileList
 						title=""

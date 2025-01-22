@@ -8,7 +8,7 @@ export const prerender = false;
 const blogArticles = await getCollection("blog");
 const zennArticles = await getCollection("zenn");
 
-const articles = [...blogArticles, ...zennArticles].sort((a, b) => {
+const articles = [...blogArticles.filter((entry) => entry.data.published), ...zennArticles].sort((a, b) => {
 	const aDate = new Date(a.data.date);
 	const bDate = new Date(b.data.date);
 	return bDate.getTime() - aDate.getTime();

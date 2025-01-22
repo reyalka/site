@@ -24,6 +24,6 @@ const { data } = blog;
 const { Content } = await render(blog);
 ---
 
-<Blog title={data.title} noindex={!data.published}>
+<Blog title={data.title} date={data.date} noindex={!data.published}>
 	<Content />
 </Blog>
