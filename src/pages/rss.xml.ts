@@ -18,20 +18,20 @@ export async function GET(context: any) {
 		items: articles.map((entry) => {
 			return entry.collection === "zenn"
 				? {
-					title: entry.data.title,
-					link: entry.data.link,
-					pubDate: new Date(entry.data.date),
-					enclosure: {
-						url: entry.data.ogUrl,
-						length: 0,
-						type: "image/png",
-					},
-				}
+						title: entry.data.title,
+						link: entry.data.link,
+						pubDate: new Date(entry.data.date),
+						enclosure: {
+							url: entry.data.ogUrl,
+							length: 0,
+							type: "image/png",
+						},
+					}
 				: {
-					title: entry.data.title,
-					link: `/blog/${entry.id}`,
-					pubDate: new Date(entry.data.date),
-				};
+						title: entry.data.title,
+						link: `/blog/${entry.id}`,
+						pubDate: new Date(entry.data.date),
+					};
 		}),
 		customData: "<language>ja-jp</language>",
 	});

@@ -137,7 +137,7 @@ export function Account({ account }: { account: AccountType }) {
 	return (
 		<a
 			href={link}
-			className="flex flex-col rounded-full px-8 py-2 font-mono w-[calc(100svw-2rem)] sm:max-w-[60rem] transition duration-150 overflow-hidden hover:scale-105 sm:flex-row sm:gap-5"
+			className="flex w-[calc(100svw-2rem)] flex-col overflow-hidden rounded-full px-8 py-2 font-mono transition duration-150 hover:scale-105 sm:max-w-[60rem] sm:flex-row sm:gap-5"
 			style={{ backgroundColor: `${media.color}33` }}
 			target="_blank"
 			rel="noopener noreferrer"
