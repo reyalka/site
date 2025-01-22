@@ -16,5 +16,6 @@ export default defineConfig({
 	},
 
 	site: "https://reyalka.pages.dev",
+	output: "server",
 	adapter: cloudflare(),
 });
