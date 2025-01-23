@@ -10,11 +10,9 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
 	integrations: [tailwind(), react()],
-
 	image: {
 		domains: ["res.cloudinary.com"],
 	},
-
 	site: "https://reyalka.pages.dev",
 	output: "server",
 	adapter: cloudflare(),

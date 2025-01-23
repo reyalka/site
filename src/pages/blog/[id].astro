@@ -4,12 +4,7 @@ import type { GetStaticPaths } from "astro";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 
-//export const getStaticPaths = (async() => {
-//	const blog = await getCollection("blog");
-//	return blog.map(blog => ({
-//
-//	})
-//} satisfies GetStaticPaths);
+export const prerender = true;
 
 export const getStaticPaths = (async () => {
 	const blog = await getCollection("blog");

@@ -3,8 +3,6 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import Article from "@/components/Article.astro";
 
-export const prerender = false;
-
 const blogArticles = await getCollection("blog");
 const zennArticles = await getCollection("zenn");
 
