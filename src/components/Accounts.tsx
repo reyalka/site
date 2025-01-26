@@ -104,7 +104,7 @@ export const accountInfo: AccountType[] = [
 			),
 			color: "#5865F2",
 		},
-		name: "@reyalka_",
+		name: "@reyalka",
 		link: "https://discord.com/users/1319666895208841268",
 	},
 	{
