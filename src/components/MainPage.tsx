@@ -12,7 +12,7 @@ export default function Page() {
 
 	return (
 		<div className="flex flex-col gap-10 rounded-lg md:flex-row">
-			<animated.div className="z-10 flex flex-col justify-center">
+			<animated.div className="z-10 flex flex-col items-center">
 				<animated.img
 					src="/reyalka.webp"
 					alt="reyalka"
@@ -38,11 +38,9 @@ export default function Page() {
 							<p key="intro" className="text-xl">
 								フロントエンドに興味がある学生です。
 							</p>,
-							<div key="accounts" className="flex flex-col gap-3">
-								{...accountInfo.map((account) => {
-									return <Account key={account.link} account={account} />;
-								})}
-							</div>,
+							...accountInfo.map((account) => {
+								return <Account key={account.link} account={account} />;
+							}),
 						]}
 					/>
 				</li>
