@@ -21,11 +21,11 @@ export default function Page() {
 				/>
 				<animated.h2
 					style={nameSpring}
-					className="my-3 mr-4 font-serif text-5xl font-bold"
+					className="my-3 mr-4 font-serif text-3xl font-bold"
 				>
 					reyalka
 				</animated.h2>
-				<animated.p style={subNameSpring} className="text-3xl font-bold">
+				<animated.p style={subNameSpring} className="text-xl font-bold">
 					れやか
 				</animated.p>
 			</animated.div>
@@ -35,7 +35,7 @@ export default function Page() {
 					<ProfileList
 						title=""
 						contents={[
-							<p key="intro" className="text-3xl">
+							<p key="intro" className="text-xl">
 								フロントエンドに興味がある学生です。
 							</p>,
 							<div key="accounts" className="flex flex-col gap-3">
@@ -78,7 +78,7 @@ function ProfileList({
 
 	return (
 		<div className="flex flex-col">
-			<animated.h2 style={titleSpting} className="text-2xl font-bold">
+			<animated.h2 style={titleSpting} className="text-lg font-bold">
 				{title}
 			</animated.h2>
 			<ul className="flex flex-col gap-5">
@@ -91,7 +91,7 @@ function ProfileList({
 						>
 							<animated.h3
 								style={generateAboutSpring(index)}
-								className="text-2xl"
+								className="text-lg"
 							>
 								{typeof content === "string" ? (
 									<p className="font-2xl font-semibold">{content}</p>

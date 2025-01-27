@@ -29,9 +29,9 @@ export function Articles({ articles }: { articles: Article[] }) {
 							alt={article.title}
 							className="h-40 w-full object-cover"
 						/>
-						<h3 className="text-2xl font-bold">{article.title}</h3>
-						<p className="text-lg">{article.description}</p>
-						<p className="text-sm">{article.date}</p>
+						<h3 className="text-lg font-bold">{article.title}</h3>
+						<p className="text-sm">{article.description}</p>
+						<p className="text-xs">{article.date}</p>
 					</animated.a>
 				);
 			})}
@@ -57,7 +57,7 @@ export function ArticleList({ articles }: { articles: Article[] }) {
 							class="object-contain"
 						/>
 						<div className="flex flex-col">
-							<p className="text-xl font-bold">{article.title}</p>
+							<p className="text-base font-bold">{article.title}</p>
 							<p>{article.date}</p>
 						</div>
 					</a>
