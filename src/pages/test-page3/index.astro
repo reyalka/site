@@ -1,0 +1,12 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const blogArticles = await getCollection("zenn");
+---
+
+<Layout title="test page">
+	[DEBUG] This is test page without prerender using Collection of blog</Layout
+>
+
+<p>{JSON.stringify(blogArticles)}</p>
