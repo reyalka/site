@@ -9,4 +9,4 @@ const blogArticles = await getCollection("zenn");
 	[DEBUG] This is test page without prerender using Collection of blog</Layout
 >
 
-<p>{JSON.stringify(blogArticles)}</p>
+<p>{JSON.stringify(blogArticles, null, 2)}</p>

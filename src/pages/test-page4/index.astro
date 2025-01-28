@@ -1,0 +1,24 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Article from "@/components/Article.astro";
+
+const blogArticles = await getCollection("blog");
+const zennArticles = await getCollection("zenn");
+
+const articles = [
+	...blogArticles.filter((entry) => entry.data.published),
+	...zennArticles,
+].sort((a, b) => {
+	const aDate = new Date(a.data.date);
+	const bDate = new Date(b.data.date);
+	return bDate.getTime() - aDate.getTime();
+});
+---
+
+<Layout title="Blog">
+	<h1 class="text-xl font-bold">Blog</h1>
+	<div class="m-5 flex flex-col items-center gap-4">
+		{articles.map((entry) => <Article entry={entry} />)}
+	</div>
+</Layout>
