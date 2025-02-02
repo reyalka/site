@@ -20,6 +20,10 @@ const { title, noindex = false } = Astro.props;
 		<link rel="icon" type="image/png" href="/reyalka.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={new URL("og_image.jpg", Astro.site)} />
+		<meta
+			name="google-site-verification"
+			content="qdVBh-iDtu18gt6Fr9vYv4CMOi96n-_QxfHB8LDBOmg"
+		/>
 		{noindex && <meta name="robots" content="noindex" />}
 		<title>{`${title} | れやかボックス`}</title>
 	</head>
