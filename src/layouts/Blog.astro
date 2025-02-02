@@ -13,8 +13,8 @@ const { title, date, noindex = false } = Astro.props;
 
 <Layout title={title} noindex={noindex}>
 	<article class="max-w-full">
-		<h2 class="text-3xl shadow-slate-500 text-shadow">{title}</h2>
-		<p class="text-xl text-site-light-black-600">
+		<h2 class="text-shadow text-3xl shadow-slate-500">{title}</h2>
+		<p class="text-site-light-black-600 text-xl">
 			<time datetime={date}>{date}</time>
 		</p>
 		<BlogWrapper>
