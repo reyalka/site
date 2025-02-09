@@ -11,7 +11,7 @@ content:
         type: text
         required: true
       - name: published
-        label: Pubpished
+        label: Published
         type: boolean
         required: true
       - name: date
