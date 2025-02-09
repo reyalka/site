@@ -5,6 +5,8 @@ content:
   - name: blog
     path: src/contents/blog
     type: collection
+    view: 
+      fields: [title, published, date, body]
     fields:
       - name: filename
         label: ファイル名
