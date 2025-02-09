@@ -1,0 +1,23 @@
+media:
+  input: src/contents/blog
+  output: src/contents/blog
+content:
+  - name: blog
+    path: src/contents/blog
+    type: collection
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: published
+        label: Pubpished
+        type: boolean
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
