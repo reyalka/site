@@ -6,18 +6,22 @@ content:
     path: src/contents/blog
     type: collection
     fields:
+      - name: filename
+        label: ファイル名
+        type: text
+        required: true
       - name: title
-        label: Title
+        label: タイトル
         type: text
         required: true
       - name: published
-        label: Published
+        label: 公開設定
         type: boolean
         required: true
       - name: date
-        label: Date
+        label: 日付
         type: date
         required: true
       - name: body
-        label: Body
+        label: 本文
         type: rich-text
