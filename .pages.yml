@@ -5,7 +5,7 @@ content:
   - name: blog
     path: src/contents/blog
     type: collection
-    filename: "{fields.filname}.md"
+    filename: "{fields.filename}.md"
     view:
       fields: [title, published, date, body]
     fields:
