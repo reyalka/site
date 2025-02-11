@@ -19,6 +19,14 @@ const { data } = blog;
 const { Content } = await render(blog);
 ---
 
-<Blog title={data.title} date={data.date} noindex={!data.published}>
+<Blog
+	title={data.title}
+	date={data.date.toLocaleDateString("ja-JP", {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	})}
+	noindex={!data.published}
+>
 	<Content />
 </Blog>
