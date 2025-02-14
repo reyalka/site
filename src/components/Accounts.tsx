@@ -47,7 +47,7 @@ export const accountInfo: AccountType[] = [
 			),
 			color: "#000000",
 		},
-		name: "@_reyalka_",
+		name: "@reyalka_dev",
 		link: "https://x.com/_reyalka_",
 	},
 	{
