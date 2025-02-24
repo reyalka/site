@@ -1,7 +1,7 @@
 ---
 import Header from "@/components/Header.astro";
 import "@fontsource/kaisei-opti";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
 	title: string;
@@ -24,9 +24,14 @@ const { title, noindex = false } = Astro.props;
 			name="google-site-verification"
 			content="qdVBh-iDtu18gt6Fr9vYv4CMOi96n-_QxfHB8LDBOmg"
 		/>
-		<meta name="google-site-verification" content="5hs-NdHOBGIPIuGKe305ysa1McoMTltRTaSV6LNBUXc" />
+		<meta
+			name="google-site-verification"
+			content="5hs-NdHOBGIPIuGKe305ysa1McoMTltRTaSV6LNBUXc"
+		/>
 		{noindex && <meta name="robots" content="noindex" />}
-		<title>{`${title} | れやかボックス`}</title>
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<title>{`${title} | れやかボックスk`}</title>
 	</head>
 	<body class="flex min-h-screen flex-col">
 		<Header />
@@ -36,7 +41,7 @@ const { title, noindex = false } = Astro.props;
 		<footer class="p-4 text-center text-xs text-gray-500">
 			Copyright © 2024 - present(2025) れやか,reyalka. All rights reserved.
 		</footer>
-		<ViewTransitions />
+		<ClientRouter />
 	</body>
 </html>
 <style is:global>
