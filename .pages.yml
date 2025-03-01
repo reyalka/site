@@ -1,5 +1,6 @@
 media:
   input: src/contents/blog
+  categories: [image, video]
   output: src/contents/blog
 content:
   - name: blog
