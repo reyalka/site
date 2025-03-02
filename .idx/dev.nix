@@ -13,13 +13,15 @@
 
   # Sets environment variables in the workspace
   env = {
-    PORT = "4321";
+    PORT = "9000";
   };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       "vscodevim.vim"
       "astro-build.astro-vscode"
+      "bradlc.vscode-tailwindcss"
+      "EditorConfig.EditorConfig"
     ];
 
     # Enable previews
@@ -29,11 +31,11 @@
         web = {
           # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
           # and show it in IDX's web preview panel
-          command = ["pnpm" "dev"];
+          command = [ "pnpm" "dev" "--port" "9000" "--host" "0.0.0.0" ];
           manager = "web";
           env = {
             # Environment variables to set for your server
-            PORT = "4321";
+            PORT = "9000";
           };
         };
       };
