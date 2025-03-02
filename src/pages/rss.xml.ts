@@ -1,5 +1,6 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
+import { marked } from "marked";
 
 // biome-ignore lint/suspicious/noExplicitAny: <よくわからない>
 export async function GET(context: any) {
@@ -31,7 +32,7 @@ export async function GET(context: any) {
 						title: entry.data.title,
 						link: `/blog/${entry.id}`,
 						pubDate: new Date(entry.data.date),
-						content: entry.body ?? "",
+						content: marked.parse(entry.body ?? ""),
 					};
 		}),
 		customData: "<language>ja-jp</language>",
