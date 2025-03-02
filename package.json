@@ -12,9 +12,8 @@
 		"fmt": "prettier -w ./src"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^12.2.1",
-		"@astrojs/rss": "^4.0.11",
-		"@astrojs/sitemap": "^3.2.1",
+		"astro": "^5.1.10",
+		"fast-xml-parser": "^4.5.1",
 		"lucide": "^0.469.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
@@ -22,17 +21,22 @@
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.4",
+		"@astrojs/cloudflare": "^12.2.1",
+		"@astrojs/markdown-remark": "6.2.0",
 		"@astrojs/react": "^4.2.0",
+		"@astrojs/rss": "^4.0.11",
+		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/tailwind": "^5.1.5",
 		"@fontsource/kaisei-opti": "^5.1.0",
 		"@react-spring/web": "^9.7.5",
+		"@tailwindcss/typography": "0.5.16",
 		"@types/react": "^19.0.2",
 		"@types/react-dom": "^19.0.2",
-		"astro": "^5.1.10",
-		"fast-xml-parser": "^4.5.1",
 		"prettier": "3.4.2",
 		"prettier-plugin-astro": "0.14.1",
 		"prettier-plugin-tailwindcss": "0.6.10",
+		"rehype-external-links": "3.0.0",
+		"rehype-raw": "7.0.0",
 		"sharp": "0.33.5",
 		"typescript": "^5.6.3"
 	}
