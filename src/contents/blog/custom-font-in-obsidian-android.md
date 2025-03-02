@@ -1,9 +1,9 @@
 ---
+filename: " "
 title: AndroidのObsidianで好きなフォントを！！
-date: 2025-03-02
 published: true
+date: 2025-03-02
 ---
-
 Obsidian使ってますか？
 
 今回はスマホのObsidianで好きなフォントを導入します。
@@ -16,7 +16,7 @@ Obsidian使ってますか？
 
 ### フォントをダウンロードする
 
-お好きなフォントをダウンロードします。今回はGoogle Fontsから[Kaisei Opti](https://fonts.google.com/specimen/Kaisei+Opti)というフォントをダウンロードします。
+お好きなフォントをダウンロードします。今回はGoogle Fontsから[Kaisei Opti](https://fonts.google.com/specimen/Kaisei+Opti)というフォント(このサイトで使われているフォントです♪)をダウンロードします。
 
 ダウンロードして得られた`Kaisei_Opti.zip`を展開して、`KaiseiOpti-Regular.ttf`を取り出します。
 
