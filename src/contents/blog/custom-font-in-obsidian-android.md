@@ -1,6 +1,6 @@
 ---
 title: AndroidのObsidianで好きなフォントを！！
-date: "2025-03-01"
+date: 2025-03-02
 published: true
 ---
 
