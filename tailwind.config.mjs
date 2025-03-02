@@ -1,4 +1,5 @@
 import plugin from "tailwindcss/plugin";
+import TailwindTypography from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -46,6 +47,7 @@ export default {
 		},
 	},
 	plugins: [
+		TailwindTypography,
 		plugin(({ matchUtilities, theme }) => {
 			matchUtilities(
 				{
