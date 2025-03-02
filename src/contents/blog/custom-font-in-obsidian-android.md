@@ -36,6 +36,7 @@ import * as fs from "fs";
  * Obsidianでこの名前が表示されます
  */
 const fontName = "Kaisei Opti";
+
 /**
  * fontが存在するpath
  */
