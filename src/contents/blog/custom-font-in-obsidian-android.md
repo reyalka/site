@@ -68,7 +68,7 @@ node index.mjs
 
 作成した`fonts.css`をObsidianに導入します。
 
-`fonts.css`をGoogle Drive, Dropboxなどお好きな方法でスマホにコピーします。著者はGitHubを通じてコピーしました。
+`fonts.css`をGoogle Drive, Dropboxなどお好きな方法でスマホにコピーします。筆者はGitHubを通じてコピーしました。
 
 このファイルを`<obsidian-vault>/.obsidian/snippets/`に移動させます。
 
