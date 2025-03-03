@@ -4,7 +4,6 @@ title: AndroidのObsidianで好きなフォントを！！
 published: true
 date: 2025-03-02
 ---
-
 Obsidian使ってますか？
 
 今回はスマホのObsidianで好きなフォントを導入します。
@@ -48,8 +47,8 @@ const base64 = font.toString("base64");
 
 const cssOutput = `
 @font-face {
-    font-family: '${fontName}';
-    src: url('data:font/ttf;base64,${base64}') format('ttf');
+    font-family: "${fontName}";
+    src: url('data:font/ttf;base64,${base64}') format('truetype');
     font-weight: normal;
     font-style: normal;
 }`;
@@ -73,7 +72,7 @@ node index.mjs
 
 このファイルを`<obsidian-vault>/.obsidian/snippets/`に移動させます。
 
-最後に、Obsidianの`外観 > CSSスニペット`をオンにして、`外観 > フォント`から`Kaisei Opti (フォント名)`を選択します。
+最後に、Obsidianの`設定 > 外観 > CSSスニペット`をオンにして、`設定 > 外観 > フォント`から`Kaisei Opti (もしくはインストールしたフォント名)`を選択します。
 
 ![](./custom-font-in-obsidian-android.1.jpg)
 
