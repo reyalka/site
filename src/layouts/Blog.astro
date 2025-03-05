@@ -12,7 +12,7 @@ const { title, date, noindex = false } = Astro.props;
 ---
 
 <Layout title={title} noindex={noindex}>
-	<article class="prose w-[min(800px,90vw)]">
+	<article class="prose w-[min(1000px,90vw)]">
 		<h2 class="text-3xl shadow-slate-500 text-shadow">{title}</h2>
 		<p class="text-xl text-site-light-black-600">
 			<time datetime={date}>{date}</time>
