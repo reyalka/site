@@ -32,7 +32,7 @@ export async function GET(context: any) {
 						title: entry.data.title,
 						link: `/blog/${entry.id}`,
 						pubDate: new Date(entry.data.date),
-						content: marked.parse(entry.body ?? ""),
+						// content: marked.parse(entry.body ?? ""),
 					};
 		}),
 		customData: "<language>ja-jp</language>",
