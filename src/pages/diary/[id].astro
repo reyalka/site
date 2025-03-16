@@ -8,22 +8,18 @@ import { getCollection } from "astro:content";
 export const prerender = true;
 
 export const getStaticPaths = (async () => {
-	const blog = await getCollection("blog");
-	return blog.map((blog) => ({
-		params: { id: blog.id },
-		props: { blog },
+	const diary = await getCollection("diary");
+	return diary.map((entry) => ({
+		params: { id: entry.id },
+		props: { diary: entry },
 	}));
 }) satisfies GetStaticPaths;
 
-const { blog } = Astro.props;
-const { data } = blog;
-const { Content } = await render(blog);
+const { diary } = Astro.props;
+const { data } = diary;
+const { Content } = await render(diary);
 ---
 
-<Blog
-	title={data.title}
-	date={toLocaleString(data.date)}
-	noindex={!data.published}
->
+<Blog title={data.title} date={toLocaleString(data.date)} noindex={true}>
 	<Content />
 </Blog>

@@ -24,9 +24,17 @@ const zenn = defineCollection({
 		title: z.string(),
 		description: z.string(),
 		rawDate: z.string(),
-		date: z.string().date(),
+		date: z.coerce.date(),
 		ogUrl: z.string().url(),
 	}),
 });
 
-export const collections = { blog, zenn };
+const diary = defineCollection({
+	loader: glob({ pattern: "**/*.{md,mdx}", base: "src/contents/diary" }),
+	schema: z.object({
+		title: z.string(),
+		date: z.coerce.date(),
+	}),
+});
+
+export const collections = { blog, zenn, diary };
