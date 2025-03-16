@@ -4,6 +4,7 @@ title: AndroidのObsidianで好きなフォントを！！
 published: true
 date: 2025-03-02
 ---
+
 Obsidian使ってますか？
 
 今回はスマホのObsidianで好きなフォントを導入します。
