@@ -28,6 +28,7 @@
 		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/tailwind": "^5.1.5",
 		"@fontsource/kaisei-opti": "^5.1.0",
+		"@react-spring/web": "^9.7.5",
 		"@tailwindcss/typography": "0.5.16",
 		"@types/react": "^19.0.2",
 		"@types/react-dom": "^19.0.2",
@@ -43,5 +44,5 @@
 	"volta": {
 		"node": "22.14.0"
 	},
-	"packageManager": "pnpm@10.6.3"
+	"packageManager": "pnpm@10.6.5"
 }
